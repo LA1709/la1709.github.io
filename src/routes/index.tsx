@@ -13,10 +13,10 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Portfolio — Analytics, AI & Product</title>
+        <title>Lakshay's Portfolio</title>
         <meta
           name="description"
-          content="Building products, insights, and systems that turn data into decisions. Case studies in analytics, AI, and product strategy."
+          content="Enabling Business Growth via Digital Transformation."
         />
       </Helmet>
       <HomeContent />
@@ -68,14 +68,6 @@ const JOURNEY = [
       "Built a lightweight verification pipeline, prioritized freshness and trust over feature depth.",
     impact: "Served 100k+ users at peak; coordinated a distributed volunteer team.",
   },
-  {
-    when: "Ongoing",
-    role: "Leadership roles",
-    org: "Growth, ops, community",
-    challenge: "Turn ambiguous mandates into shipped outcomes.",
-    approach: "Small teams, clear priorities, weekly rituals, honest metrics.",
-    impact: "Consistent record of taking 0→1 initiatives to real users.",
-  },
 ];
 
 const SKILL_CLUSTERS: {
@@ -83,54 +75,54 @@ const SKILL_CLUSTERS: {
   color: string;
   items: { name: string; projects: string[] }[];
 }[] = [
-  {
-    name: "Analytics",
-    color: "oklch(0.72 0.17 250)",
-    items: [
-      { name: "Power BI", projects: ["png-analytics", "dashboard-gallery"] },
-      { name: "SQL", projects: ["png-analytics", "sinarmas-cepsa", "freestand"] },
-      { name: "Excel", projects: ["png-analytics", "sinarmas-cepsa"] },
-      { name: "Tableau", projects: ["dashboard-gallery"] },
-      { name: "DAX", projects: ["png-analytics", "dashboard-gallery"] },
-      { name: "Looker Studio", projects: ["png-analytics"] },
-    ],
-  },
-  {
-    name: "AI",
-    color: "oklch(0.75 0.19 190)",
-    items: [
-      { name: "LLMs", projects: ["freestand", "ai-projects"] },
-      { name: "Prompt engineering", projects: ["freestand", "ai-projects"] },
-      { name: "Agent workflows", projects: ["freestand", "ai-projects"] },
-      { name: "OpenAI APIs", projects: ["freestand", "ai-projects"] },
-      { name: "Claude", projects: ["freestand", "ai-projects"] },
-      { name: "AI automation", projects: ["ai-projects"] },
-    ],
-  },
-  {
-    name: "Technical",
-    color: "oklch(0.72 0.19 20)",
-    items: [
-      { name: "Python", projects: ["freestand", "ai-projects"] },
-      { name: "Node.js", projects: ["freestand"] },
-      { name: "React", projects: ["freestand"] },
-      { name: "C++", projects: [] },
-      { name: "Bash", projects: ["ai-projects"] },
-      { name: "Git", projects: ["freestand", "ai-projects"] },
-    ],
-  },
-  {
-    name: "Business",
-    color: "oklch(0.78 0.14 90)",
-    items: [
-      { name: "Product strategy", projects: ["freestand", "covidkhoj"] },
-      { name: "Growth", projects: ["covidkhoj"] },
-      { name: "Market research", projects: ["sinarmas-cepsa"] },
-      { name: "Stakeholder mgmt", projects: ["png-analytics", "sinarmas-cepsa"] },
-      { name: "Project management", projects: ["png-analytics", "covidkhoj"] },
-    ],
-  },
-];
+    {
+      name: "Analytics",
+      color: "oklch(0.72 0.17 250)",
+      items: [
+        { name: "Power BI", projects: ["png-analytics", "dashboard-gallery"] },
+        { name: "SQL", projects: ["png-analytics", "sinarmas-cepsa", "freestand"] },
+        { name: "Excel", projects: ["png-analytics", "sinarmas-cepsa"] },
+        { name: "Tableau", projects: ["dashboard-gallery"] },
+        { name: "DAX", projects: ["png-analytics", "dashboard-gallery"] },
+        { name: "Looker Studio", projects: ["png-analytics"] },
+      ],
+    },
+    {
+      name: "AI",
+      color: "oklch(0.75 0.19 190)",
+      items: [
+        { name: "LLMs", projects: ["freestand", "ai-projects"] },
+        { name: "Prompt engineering", projects: ["freestand", "ai-projects"] },
+        { name: "Agent workflows", projects: ["freestand", "ai-projects"] },
+        { name: "OpenAI APIs", projects: ["freestand", "ai-projects"] },
+        { name: "Claude", projects: ["freestand", "ai-projects"] },
+        { name: "AI automation", projects: ["ai-projects"] },
+      ],
+    },
+    {
+      name: "Technical",
+      color: "oklch(0.72 0.19 20)",
+      items: [
+        { name: "Python", projects: ["freestand", "ai-projects"] },
+        { name: "Node.js", projects: ["freestand"] },
+        { name: "React", projects: ["freestand"] },
+        { name: "C++", projects: [] },
+        { name: "Bash", projects: ["ai-projects"] },
+        { name: "Git", projects: ["freestand", "ai-projects"] },
+      ],
+    },
+    {
+      name: "Business",
+      color: "oklch(0.78 0.14 90)",
+      items: [
+        { name: "Product strategy", projects: ["freestand", "covidkhoj"] },
+        { name: "Growth", projects: ["covidkhoj"] },
+        { name: "Market research", projects: ["sinarmas-cepsa"] },
+        { name: "Stakeholder mgmt", projects: ["png-analytics", "sinarmas-cepsa"] },
+        { name: "Project management", projects: ["png-analytics", "covidkhoj"] },
+      ],
+    },
+  ];
 
 const AI_WORKFLOWS = [
   {
@@ -157,7 +149,7 @@ function HomeContent() {
   const recruiter = useRecruiterMode();
   const [activeSkill, setActiveSkill] = useState<string | null>(null);
 
-  // ⌘K binding
+  // Ctrl +K binding
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
@@ -181,24 +173,25 @@ function HomeContent() {
         <div className="absolute inset-0 opacity-70">
           <NodesBackground />
         </div>
-        <div className="container-page relative pt-20 pb-32 md:pt-28 md:pb-40">
+        <div className="container-page relative pt-10 pb-10 md:pt-14 md:pb-14">
           <div className="chip mb-6 animate-fade-in">
             <span className="h-1.5 w-1.5 rounded-full bg-brand animate-pulse" />
-            Available for Analytics · Product · Strategy roles
+            <span className="text-brand">Dual Specialization:</span>
+            Analytics & Operations + Strategy & Organisation
           </div>
           <h1 className="max-w-4xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.05]">
-            Building products, insights, and systems that turn{" "}
+            Building products that turn{" "}
             <span className="text-gradient">data into decisions</span>.
           </h1>
           <p className="mt-6 max-w-2xl text-base md:text-lg text-muted-foreground">
             I work at the intersection of analytics, AI, product strategy, and business
-            growth — designing systems that move real teams from information to action.
+            growth — designing systems that move teams <span className="text-brand">from information to action.</span>
           </p>
           <div className="mt-8 flex flex-wrap gap-2">
             <a href="#work" className="btn-primary">Explore my work →</a>
             <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn-ghost">Resume</a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="btn-ghost">LinkedIn</a>
-            <a href="mailto:hello@example.com" className="btn-ghost">Email</a>
+            <a href="https://www.linkedin.com/in/lakshay-agrawal/" target="_blank" rel="noreferrer" className="btn-ghost">LinkedIn</a>
+            <a href="mailto:lakshay.agrawal@u.nus.edu" target="_blank" rel="noreferrer" className="btn-ghost">Email</a>
           </div>
 
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -218,7 +211,7 @@ function HomeContent() {
       </section>
 
       {/* JOURNEY */}
-      <section id="journey" className="container-page py-24 md:py-32">
+      <section id="journey" className="container-page py-12 md:py-16">
         <SectionHeader eyebrow="Career journey" title="From data to decisions to systems." />
         <div className="mt-14 relative">
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-px" />
@@ -231,7 +224,7 @@ function HomeContent() {
                   <div className="text-sm text-muted-foreground mt-1">{j.org}</div>
                 </div>
                 <div className={`card-elevated p-6 relative ${i % 2 === 1 ? "md:order-1" : ""}`}>
-                  <span className="absolute left-0 md:left-auto md:right-full top-6 h-3 w-3 rounded-full bg-brand shadow-[0_0_16px_var(--brand)] -translate-x-[calc(1rem+6px)] md:translate-x-[calc(2.5rem-6px)]" />
+                  {/* <span className="absolute left-0 md:left-auto md:right-full top-6 h-3 w-3 rounded-full bg-brand shadow-[0_0_16px_var(--brand)] -translate-x-[calc(1rem+6px)] md:translate-x-[calc(2.5rem-6px)]" /> */}
                   <Row k="Challenge" v={j.challenge} />
                   <Row k="Approach" v={j.approach} />
                   <Row k="Impact" v={j.impact} last />
@@ -429,7 +422,7 @@ function HomeContent() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="container-page py-24 md:py-32">
+      {/* <section className="container-page py-24 md:py-32">
         <SectionHeader eyebrow="Testimonials" title="What managers, founders, and professors say." />
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {[1, 2, 3].map((i) => (
@@ -451,7 +444,7 @@ function HomeContent() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* CONTACT */}
       <section id="contact" className="relative py-24 md:py-32 border-t border-border/60 overflow-hidden">
@@ -461,7 +454,7 @@ function HomeContent() {
         <div className="container-page relative">
           <SectionHeader eyebrow="Contact" title="Reach me like it's a command line." />
           <p className="mt-4 max-w-xl text-muted-foreground">
-            Prefer a keyboard? Press <kbd className="chip font-mono">⌘ K</kbd> anywhere on
+            Prefer a keyboard? Press <kbd className="chip font-mono">Ctrl + K</kbd> anywhere on
             the site. Or type below.
           </p>
           <div className="mt-10 mx-auto max-w-xl">
@@ -473,13 +466,13 @@ function HomeContent() {
                 <span className="text-brand">{'>'}</span>
                 type a command…
               </span>
-              <span className="chip font-mono">⌘ K</span>
+              <span className="chip font-mono">Ctrl + K</span>
             </button>
             <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2">
-              <a href="mailto:hello@example.com" className="btn-ghost text-xs">{'>'} email</a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="btn-ghost text-xs">{'>'} linkedin</a>
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="btn-ghost text-xs">{'>'} github</a>
-              <a href="https://cal.com" target="_blank" rel="noreferrer" className="btn-ghost text-xs">{'>'} schedule</a>
+              <a href="mailto:lakshay.agrawal@u.nus.edu" target="_blank" rel="noreferrer" className="btn-ghost text-xs">{'>'} email</a>
+              <a href="https://www.linkedin.com/in/lakshay-agrawal/" target="_blank" rel="noreferrer" className="btn-ghost text-xs">{'>'} linkedin</a>
+              <a href="https://github.com/LA1709" target="_blank" rel="noreferrer" className="btn-ghost text-xs">{'>'} github</a>
+              <a href="https://calendar.app.google/efQATa1Rmv3HRdkFA" target="_blank" rel="noreferrer" className="btn-ghost text-xs">{'>'} schedule</a>
             </div>
           </div>
         </div>
@@ -488,7 +481,7 @@ function HomeContent() {
       <footer className="border-t border-border/60">
         <div className="container-page py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
           <div>© {new Date().getFullYear()} — Built as a product, not a resume.</div>
-          <div className="font-mono">Press ⌘ K anywhere</div>
+          <div className="font-mono">Press Ctrl + K anywhere</div>
         </div>
       </footer>
 
@@ -528,14 +521,14 @@ function Stat({ k, v }: { k: string; v: string }) {
 
 function RecruiterPanel() {
   return (
-    <div className="border-b border-brand/30 bg-brand/5">
+    <div className="sticky top-14 border-b border-brand/30 bg-brand/5 z-30">
       <div className="container-page py-4">
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs">
-          <div className="chip !text-brand !border-brand/40">Recruiter mode</div>
+          <div className="chip !text-brand !border-brand/40">Quick Brief</div>
           <Snippet k="Role fit" v="Analytics · Product · Strategy · AI" />
           <Snippet k="Work auth" v="Open to sponsorship" />
-          <Snippet k="Graduation" v="MBA · 2026" />
-          <Snippet k="Contact" v="hello@example.com" />
+          <Snippet k="Graduation" v="MBA · Jan 2027" />
+          <Snippet k="Contact" v="lakshay.agrawal@u.nus.edu" />
           <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn-ghost !py-1.5 !text-xs ml-auto">Resume →</a>
         </div>
       </div>

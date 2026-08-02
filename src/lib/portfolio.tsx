@@ -264,7 +264,7 @@ export function NodesBackground() {
         );
       })}
 
-      {extras.map((n, i) => (
+      {/* {extras.map((n, i) => (
         <circle
           key={`e-${i}`}
           cx={n.x}
@@ -274,9 +274,9 @@ export function NodesBackground() {
           opacity={0.35}
           style={{ animation: `pulse-node ${3 + (i % 4)}s ease-in-out ${n.d}s infinite` }}
         />
-      ))}
+      ))} */}
 
-      {nodes.map((n, i) => (
+      {/* {nodes.map((n, i) => (
         <g key={n.label}>
           <circle cx={n.x} cy={n.y} r={4} fill="url(#glow)" />
           <circle cx={n.x} cy={n.y} r={1.6} fill="oklch(0.98 0.01 250)" />
@@ -292,7 +292,7 @@ export function NodesBackground() {
             {n.label.toUpperCase()}
           </text>
         </g>
-      ))}
+      ))} */}
     </svg>
   );
 }
@@ -304,12 +304,12 @@ export function useRecruiterMode() {
   useEffect(() => {
     try {
       setOn(localStorage.getItem("recruiter-mode") === "1");
-    } catch {}
+    } catch { }
   }, []);
   const toggle = () => {
     setOn((v) => {
       const next = !v;
-      try { localStorage.setItem("recruiter-mode", next ? "1" : "0"); } catch {}
+      try { localStorage.setItem("recruiter-mode", next ? "1" : "0"); } catch { }
       return next;
     });
   };
@@ -335,11 +335,11 @@ export function CommandPalette({ open, onClose }: { open: boolean; onClose: () =
   }, [open]);
 
   const items: CmdItem[] = [
-    { cmd: "> email", label: "Send an email", hint: "hello@example.com", action: () => (window.location.href = "mailto:hello@example.com") },
-    { cmd: "> linkedin", label: "Open LinkedIn", action: () => window.open("https://linkedin.com", "_blank") },
-    { cmd: "> github", label: "Open GitHub", action: () => window.open("https://github.com", "_blank") },
+    { cmd: "> email", label: "Send an email", hint: "lakshay.agrawal@u.nus.edu", action: () => (window.location.href = "mailto:lakshay.agrawal@u.nus.edu") },
+    { cmd: "> linkedin", label: "Open LinkedIn", action: () => window.open("https://www.linkedin.com/in/lakshay-agrawal/", "_blank") },
+    { cmd: "> github", label: "Open GitHub", action: () => window.open("https://github.com/LA1709", "_blank") },
     { cmd: "> resume", label: "View resume", action: () => window.open("/resume.pdf", "_blank") },
-    { cmd: "> schedule", label: "Schedule a call", action: () => window.open("https://cal.com", "_blank") },
+    { cmd: "> schedule", label: "Schedule a call", action: () => window.open("https://calendar.app.google/efQATa1Rmv3HRdkFA", "_blank") },
     { cmd: "> work", label: "Explore case studies", action: () => { window.location.hash = "#work"; onClose(); } },
     { cmd: "> ai", label: "How I use AI", action: () => { window.location.hash = "#ai"; onClose(); } },
     { cmd: "> journey", label: "Career journey", action: () => { window.location.hash = "#journey"; onClose(); } },
@@ -384,7 +384,7 @@ export function CommandPalette({ open, onClose }: { open: boolean; onClose: () =
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center gap-3 px-4 py-3 border-b border-border">
-          <span className="font-mono text-xs text-muted-foreground">⌘</span>
+          <span className="font-mono text-xs text-muted-foreground">{">"}</span>
           <input
             ref={inputRef}
             value={q}
@@ -447,14 +447,14 @@ export function TopNav({
         <div className="flex items-center gap-2">
           <button
             onClick={recruiter.toggle}
-            className={`chip ${recruiter.on ? "!text-brand !border-brand/40" : ""}`}
+            className={`chip ${recruiter.on ? "!text-brand !border-brand/40" : ""} cursor-pointer`}
             title="Toggle Recruiter Mode"
           >
             <span className={`h-1.5 w-1.5 rounded-full ${recruiter.on ? "bg-brand" : "bg-muted-foreground"}`} />
             Recruiter mode
           </button>
-          <button onClick={onOpenPalette} className="btn-ghost !py-1.5 !text-xs font-mono">
-            ⌘ K
+          <button onClick={onOpenPalette} className="btn-ghost !py-1.5 !text-xs font-mono cursor-pointer">
+            Ctrl + K
           </button>
         </div>
       </div>
