@@ -7,7 +7,7 @@ export type CaseStudy = {
   slug: string;
   title: string;
   tag: string;
-  category: "AI" | "Analytics" | "Product" | "Strategy" | "Leadership" | "Marketing";
+  category: "Digital Transformation" | "AI" | "Analytics" | "Product" | "Strategy" | "Leadership" | "Marketing";
   summary: string;
   metrics: { label: string; value: string }[];
   tools: string[];
@@ -20,185 +20,240 @@ export type CaseStudy = {
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
-    slug: "freestand",
-    title: "Freestand",
-    tag: "Flagship · AI + Product",
-    category: "AI",
+    slug: "keppel-pm",
+    title: "Keppel Data Centres",
+    tag: "Enterprise · Project Management",
+    category: "Digital Transformation",
     summary:
-      "An AI-native product that turns customer signals into decisions — combining LLM workflows, structured data, and opinionated UX.",
+      "Redesigning 30+ project workflows across 14 stakeholders, then translating them into digital solutions using the Power Platform.",
     metrics: [
-      { label: "Time-to-insight", value: "−82%" },
-      { label: "Weekly active users", value: "3.4k" },
-      { label: "Agent workflows", value: "12" },
+      { label: "Workflows", value: "30+" },
+      { label: "Stakeholders", value: "15" },
+      { label: "Incoming Interns", value: "4" },
     ],
-    tools: ["OpenAI", "Claude", "Node.js", "Python", "Postgres", "Vercel"],
+    tools: [
+      "Power BI",
+      "Power Apps",
+      "Power Automate",
+      "Figma",
+      "Workflow Design",
+    ],
     problem:
-      "Operators drown in customer signals — tickets, calls, reviews, product analytics — with no coherent way to turn them into decisions.",
+      "Project delivery in data centres is highly operational and involves numerous stakeholders, workflows, and manual processes. Improving transparency requires digitizing these processes without losing sight of how work actually happens on site.",
     approach: [
-      "Designed an agent workflow: ingestion → structuring → reasoning → recommendation.",
-      "Prompt-engineered a taxonomy layer so LLM outputs stay auditable and comparable across weeks.",
-      "Shipped an opinionated dashboard: fewer charts, more decisions.",
-      "Built a feedback loop so PMs could grade AI outputs and improve the system.",
+      "Mapped existing project management workflows across 14 stakeholder groups to understand processes, dependencies, and pain points.",
+      "Redesigned workflows before digitizing them, focusing on where technology could improve visibility and reduce manual coordination.",
+      "Designed solutions using Power BI, Power Apps, Power Automate, and Figma across 30+ project workflows.",
+      "Built structured recruitment and onboarding processes for incoming interns to support continuity of the transformation initiatives.",
     ],
     impact: [
-      "Cut analyst review time from 6 hours to under 1 per week.",
-      "Surfaced 3 product bets that shipped to roadmap.",
-      "Became the source of truth for weekly ops reviews.",
+      "Digitizing 30+ project management workflows across 14 stakeholder groups.",
+      "Creating greater structure and transparency across project management processes.",
+      "Recruited and onboarded 3 incoming interns to support continuity and scale the initiatives.",
     ],
     learnings: [
-      "AI wins when the surrounding product does the boring work well.",
-      "Structure beats cleverness — a stable taxonomy compounds.",
-      "Design for the moment a human overrides the model.",
+      "Digital transformation starts with understanding the workflow, not choosing the technology.",
+      "The best solution has to work for teams operating in the field, not just look good on a screen.",
+      "Transformation only scales when the process can continue without the person who designed it.",
     ],
-    accent: "linear-gradient(135deg, oklch(0.72 0.17 250), oklch(0.75 0.19 190))",
+    accent:
+      "linear-gradient(135deg, oklch(0.72 0.17 250), oklch(0.75 0.19 190))",
   },
+
   {
     slug: "png-analytics",
-    title: "P&G Analytics & Insights",
-    tag: "Analytics · Decision Support",
+    title: "Procter & Gamble",
+    tag: "Consumer Insights",
     category: "Analytics",
     summary:
-      "Built KPI monitoring and analytics workflows that shaped commercial decisions across categories.",
+      "Translated campaign data and market insights into execution-ready content playbooks for Thailand and Australia.",
     metrics: [
-      { label: "Dashboards shipped", value: "20+" },
-      { label: "Decision cadence", value: "Weekly" },
-      { label: "Stakeholders", value: "Cross-functional" },
+      { label: "Markets", value: "2" },
+      { label: "Gaps Identified", value: "6" },
+      { label: "New Campaigns", value: "4" },
     ],
-    tools: ["Power BI", "SQL", "DAX", "Excel", "Looker Studio"],
+    tools: [
+      "Creator Strategy",
+      "Consumer Insights",
+      "Market Research",
+      "Content Strategy",
+    ],
     problem:
-      "Category teams needed a single, reliable read on performance — without waiting for one-off pulls.",
+      "Campaign data and market insights only create value when local teams can translate them into concrete execution decisions.",
     approach: [
-      "Modeled a semantic layer for commercial KPIs so every dashboard told the same story.",
-      "Standardized weekly business review templates around 5 questions, not 50 charts.",
-      "Automated anomaly callouts so leaders opened dashboards already knowing where to look.",
+      "Analyzed campaign performance and market context to identify actionable patterns.",
+      "Connected analytical findings with the practical content decisions facing local market teams.",
+      "Structured insights into execution-ready content playbooks for Thailand and Australia.",
     ],
     impact: [
-      "Weekly reviews moved from data-gathering to decision-making.",
-      "Reduced ad-hoc pull requests by ~60%.",
-      "Enabled category leaders to act on trends within days, not weeks.",
+      "Converted campaign and market analysis into practical recommendations for two markets.",
+      "Created execution-ready playbooks that connected analytical insight with content decisions.",
     ],
     learnings: [
-      "The best dashboards remove work, not add polish.",
-      "A shared vocabulary is worth more than another visualization.",
+      "Insight is only valuable when someone knows what to do differently because of it.",
+      "The same data can lead to different actions depending on the market context.",
     ],
-    accent: "linear-gradient(135deg, oklch(0.72 0.17 250), oklch(0.72 0.19 20))",
+    accent:
+      "linear-gradient(135deg, oklch(0.72 0.17 250), oklch(0.72 0.19 20))",
   },
-  {
-    slug: "covidkhoj",
-    title: "COVIDKhoj",
-    tag: "Founder · 0→1",
-    category: "Leadership",
-    summary:
-      "Founded a crisis-response platform during COVID-19 that helped thousands find verified medical resources when they needed them most.",
-    metrics: [
-      { label: "Users served", value: "100k+" },
-      { label: "Verified leads", value: "10k+" },
-      { label: "Team", value: "Volunteer-led" },
-    ],
-    tools: ["Product", "Growth", "Ops", "Community"],
-    problem:
-      "During the second wave, verified medical resources were scattered across WhatsApp, Twitter, and spreadsheets. People were making life-or-death decisions on stale data.",
-    approach: [
-      "Built a lightweight verification pipeline with a distributed volunteer team.",
-      "Prioritized speed and trust over feature depth — freshness was the product.",
-      "Designed for the worst-case user: low-bandwidth, high-stress, one shot.",
-    ],
-    impact: [
-      "Served 100k+ users in the peak weeks.",
-      "Coordinated a volunteer team across time zones.",
-      "Featured in national media as a trusted resource.",
-    ],
-    learnings: [
-      "In a crisis, trust is the moat.",
-      "Ownership scales further than authority.",
-    ],
-    accent: "linear-gradient(135deg, oklch(0.72 0.19 20), oklch(0.75 0.19 60))",
-  },
+
   {
     slug: "sinarmas-cepsa",
     title: "Sinarmas Cepsa",
-    tag: "Strategy · Analytics",
-    category: "Strategy",
-    summary:
-      "Partnered with commercial leaders on market analysis and operational insight for a joint-venture business.",
-    metrics: [
-      { label: "Markets covered", value: "SEA" },
-      { label: "Reviews", value: "Monthly" },
-      { label: "Scope", value: "Commercial + Ops" },
-    ],
-    tools: ["Excel", "SQL", "Market research", "Frameworks"],
-    problem:
-      "Leaders needed a joined-up view across sales, ops, and market context to plan quarterly moves.",
-    approach: [
-      "Built a rolling market view combining internal and external signals.",
-      "Framed decisions around 'what would change your mind' rather than reporting.",
-    ],
-    impact: [
-      "Informed pricing and channel decisions in monthly reviews.",
-      "Helped commercial team narrow focus to highest-leverage segments.",
-    ],
-    learnings: [
-      "Analysis is only useful if the decision-maker can act on it this week.",
-    ],
-    accent: "linear-gradient(135deg, oklch(0.75 0.19 190), oklch(0.72 0.17 250))",
-  },
-  {
-    slug: "dashboard-gallery",
-    title: "Analytics Dashboard Gallery",
-    tag: "Craft · Visualization",
+    tag: "Market Intelligence · Commercial Strategy",
     category: "Analytics",
     summary:
-      "A curated set of dashboarding work across Power BI, Tableau-style layouts, and Excel — sanitized for public sharing.",
+      "Analyzed 100,000+ global oleochemical trade flows alongside operating rates and supply-demand dynamics across 100+ markets.",
     metrics: [
-      { label: "Dashboards", value: "20+" },
-      { label: "Tools", value: "Power BI · Tableau · Excel" },
-      { label: "Domains", value: "CPG · Ops · Growth" },
+      { label: "Trade Flows", value: "100K+" },
+      { label: "Markets", value: "100+" },
+      { label: "Scope", value: "Global" },
     ],
-    tools: ["Power BI", "Tableau", "Excel", "DAX", "SQL"],
+    tools: [
+      "Data Analysis",
+      "Market Intelligence",
+      "Trade Data",
+      "Supply-Demand Analysis",
+    ],
     problem:
-      "Most dashboards fail because they answer no specific question. This collection is built around the opposite premise.",
+      "Understanding a global commodity market requires connecting fragmented trade, production, operating-rate, and supply-demand signals across countries.",
     approach: [
-      "Every view opens on a headline number and a 'why'.",
-      "Drilldowns follow the analyst's actual reasoning path.",
-      "Color, spacing, and hierarchy do the heavy lifting — not novelty.",
+      "Analyzed more than 100,000 global oleochemical trade flows across 100+ markets.",
+      "Combined trade patterns with operating rates and broader supply-demand dynamics.",
+      "Structured large volumes of market information into a coherent view of global market movements.",
     ],
     impact: [
-      "Replaced weekly recurring meetings with self-serve reads.",
-      "Cut chart count per dashboard by ~40% while raising engagement.",
+      "Built a structured view of trade and supply-demand dynamics across 100+ markets.",
+      "Converted large-scale market data into decision-oriented market intelligence.",
     ],
     learnings: [
-      "A dashboard is a product. Treat it like one.",
+      "Market intelligence comes from connecting signals, not analyzing datasets in isolation.",
+      "The useful question is rarely what changed — it is why it changed and what that implies.",
     ],
-    accent: "linear-gradient(135deg, oklch(0.72 0.17 250), oklch(0.75 0.19 190))",
+    accent:
+      "linear-gradient(135deg, oklch(0.75 0.19 190), oklch(0.72 0.17 250))",
   },
+
   {
-    slug: "ai-projects",
-    title: "AI Experiments & Automations",
-    tag: "AI · Workflows",
-    category: "AI",
+    slug: "freestand-growth",
+    title: "Head of Growth & Partnerships",
+    tag: "Growth · Partnerships",
+    category: "Strategy",
     summary:
-      "A collection of LLM applications, prompt-engineering patterns, and automation workflows built to remove real friction from real workflows.",
+      "Built partnerships, campaign operations, and technology-enabled execution for a B2B SaaS marketplace serving major FMCG brands.",
     metrics: [
-      { label: "Workflows shipped", value: "15+" },
-      { label: "Hours saved / wk", value: "20+" },
-      { label: "Stack", value: "OpenAI · Claude · n8n" },
+      { label: "Revenue", value: "$150K+" },
+      { label: "Partnerships", value: "15+" },
+      { label: "Campaigns Executed", value: "50+" },
     ],
-    tools: ["OpenAI", "Claude", "Prompt eng.", "n8n", "Python"],
+    tools: [
+      "Growth Strategy",
+      "Partnerships",
+      "Campaign Operations",
+      "AI Workflows",
+    ],
     problem:
-      "Most 'AI use cases' are demos. The interesting work is wiring AI into a workflow that survives Monday morning.",
+      "Scaling a B2B sampling marketplace required more than building the technology — it needed repeatable commercial partnerships and campaign operations capable of delivering at scale.",
     approach: [
-      "Start from the workflow, not the model.",
-      "Design prompts as small, testable functions.",
-      "Add a human-in-the-loop wherever the cost of a mistake is asymmetric.",
+      "Led innovation initiatives and partnerships with e-commerce vendors and enterprise FMCG brands.",
+      "Built and supervised a campaign operations team to execute 20+ marketing campaigns.",
+      "Developed partnerships for clients including P&G, L'Oréal, Nestlé, and Unilever.",
+      "Designed AI-enabled campaign execution and analytics workflows across e-commerce and retail channels.",
     ],
     impact: [
-      "Automated recurring research, reporting, and triage flows.",
-      "Made AI outputs auditable so teams could actually trust them.",
+      "Contributed to $150K+ in revenue through innovation initiatives and partnerships.",
+      "Secured 15+ vendor and brand partnerships while executing 20+ campaigns.",
+      "Supported the distribution of more than 1 million product samples.",
     ],
     learnings: [
-      "Being 'AI-native' means changing the workflow, not bolting on a chatbot.",
+      "Building the product and building the business are two different engineering problems.",
+      "Operations become a competitive advantage when they are designed to be repeatable.",
+      "Technology creates the most leverage when it disappears into the operating model.",
     ],
-    accent: "linear-gradient(135deg, oklch(0.72 0.19 20), oklch(0.72 0.17 250))",
+    accent:
+      "linear-gradient(135deg, oklch(0.78 0.14 90), oklch(0.72 0.19 20))",
+  },
+
+  {
+    slug: "freestand-engineering",
+    title: "Founding Engineer",
+    tag: "B2B · SaaS · 0 → 1",
+    category: "Product",
+    summary:
+      "Built the tech & data infrastructure and automation layer behind a VC-backed B2B SaaS marketplace for FMCG product sampling.",
+    metrics: [
+      { label: "Funding", value: "$400K" },
+      { label: "Data Pipelines", value: "20+" },
+      { label: "Deployments", value: "10+" },
+    ],
+    tools: [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "REST APIs",
+      "Git",
+      "Docker",
+      "AWS",
+    ],
+    problem:
+      "Product sampling was operationally fragmented, requiring a technology layer capable of connecting enterprise campaigns, digital media, payments, data, and campaign logistics.",
+    approach: [
+      "Built the SaaS marketplace platform using React, Node.js, and PostgreSQL.",
+      "Developed agentic workflows and external integrations with platforms including Meta Ads and Google Ads.",
+      "Automated payment, digital media, and campaign logistics workflows.",
+      "Led the data function, establishing 20+ data pipelines and 10+ scalable deployment workflows.",
+    ],
+    impact: [
+      "Built the core technology behind an enterprise B2B SaaS marketplace.",
+      "Supported the company in raising $400K in funding.",
+      "Created the data and deployment infrastructure required to scale campaign operations.",
+    ],
+    learnings: [
+      "Building from zero forces you to optimize for the problem, not the technology.",
+      "Good infrastructure creates options long before the business knows it needs them.",
+      "Engineering decisions become business decisions surprisingly quickly in a startup.",
+    ],
+    accent:
+      "linear-gradient(135deg, oklch(0.72 0.19 20), oklch(0.72 0.17 250))",
+  },
+
+  {
+    slug: "covidkhoj",
+    title: "Founder & CEO",
+    tag: "Entrepreneur · 0 → 1",
+    category: "Leadership",
+    summary:
+      "Founded a crowdsourced platform during India's COVID-19 crisis to make critical medical resources more accessible.",
+    metrics: [
+      { label: "People Helped", value: "50K+" },
+      { label: "Developers", value: "5" },
+      { label: "Model", value: "Volunteer" },
+    ],
+    tools: [
+      "Product",
+      "Leadership",
+      "Community",
+      "Operations",
+    ],
+    problem:
+      "During India's COVID-19 crisis, people needed fast access to critical resources while information was fragmented across communities and online channels.",
+    approach: [
+      "Founded a crowdsourced database and platform to make COVID-related resources easier to access.",
+      "Built and coordinated a volunteer team of 5 software developers.",
+      "Mobilized financial and in-kind support through community networks including the Sikh Chamber of Commerce.",
+    ],
+    impact: [
+      "Helped more than 50,000 people access COVID-related resources.",
+      "Raised more than $500 in funds and secured $300 in in-kind donations.",
+      "Built a volunteer technology team during a rapidly evolving crisis.",
+    ],
+    learnings: [
+      "In a crisis, speed and usefulness matter more than polish.",
+      "People will organize around a clear mission even when formal authority does not exist.",
+      "Technology can create disproportionate impact when it removes an immediate information bottleneck.",
+    ],
+    accent:
+      "linear-gradient(135deg, oklch(0.72 0.19 20), oklch(0.75 0.19 60))",
   },
 ];
 
@@ -338,7 +393,7 @@ export function CommandPalette({ open, onClose }: { open: boolean; onClose: () =
     { cmd: "> email", label: "Send an email", hint: "lakshay.agrawal@u.nus.edu", action: () => (window.location.href = "mailto:lakshay.agrawal@u.nus.edu") },
     { cmd: "> linkedin", label: "Open LinkedIn", action: () => window.open("https://www.linkedin.com/in/lakshay-agrawal/", "_blank") },
     { cmd: "> github", label: "Open GitHub", action: () => window.open("https://github.com/LA1709", "_blank") },
-    { cmd: "> resume", label: "View resume", action: () => window.open("/resume.pdf", "_blank") },
+    { cmd: "> resume", label: "View resume", action: () => window.open(`${import.meta.env.BASE_URL}resume.pdf`, "_blank") },
     { cmd: "> schedule", label: "Schedule a call", action: () => window.open("https://calendar.app.google/efQATa1Rmv3HRdkFA", "_blank") },
     { cmd: "> work", label: "Explore case studies", action: () => { window.location.hash = "#work"; onClose(); } },
     { cmd: "> ai", label: "How I use AI", action: () => { window.location.hash = "#ai"; onClose(); } },

@@ -103,7 +103,7 @@ export default function WorkSlug() {
       <section className="container-page py-16 border-t border-border/60">
         <div className="flex items-end justify-between mb-8">
           <h3 className="text-2xl font-semibold">More case studies</h3>
-          <Link to="/projects" className="btn-ghost !text-xs">Open project explorer →</Link>
+          {/* <Link to="/projects" className="btn-ghost !text-xs">Open project explorer →</Link> */}
         </div>
         <div className="grid gap-4 md:grid-cols-3">
           {others.map((c) => (

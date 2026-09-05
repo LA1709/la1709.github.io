@@ -29,44 +29,54 @@ export default function Home() {
 
 const JOURNEY = [
   {
-    when: "2024 — Now",
-    role: "Founder — Freestand",
-    org: "AI-native product studio",
+    when: "Current Role",
+    role: "Project Management Intern",
+    org: "Keppel Data Centers",
     challenge:
-      "Operators drown in customer signals with no coherent way to turn them into decisions.",
+      "Project delivery spans multiple workflows and stakeholders, in an ops-intensive environment.",
     approach:
-      "Designed agent workflows that ingest, structure, and reason across product data — then surface an opinionated recommendation.",
-    impact: "Cut analyst review time by ~82% and shaped roadmap bets that shipped.",
+      "Mapping workflows and designing digital solutions using the Microsoft Power Platform to connect and standardize processes.",
+    impact: "Digitalizing 30+ project workflows while building a robust business continuity plan.",
   },
   {
-    when: "2022 — 2024",
-    role: "Analytics & Insights",
-    org: "P&G",
+    when: "May 2026 — Jul 2026",
+    role: "Analytics & Insights Intern",
+    org: "Procter & Gamble",
     challenge:
-      "Category teams needed one reliable, decision-oriented read on performance.",
+      "Campaign and market data needed to drive media decisions that cascade across different markets.",
     approach:
-      "Built a semantic KPI layer, standardized weekly business review templates, and automated anomaly callouts.",
-    impact: "Weekly reviews shifted from data-gathering to decision-making; ad-hoc pulls dropped ~60%.",
+      "Established a relation between campaign performance and market insights to generate recommendations for TH & AU.",
+    impact: "Developed execution-ready content & KOL playbooks from consumer and campaign insights.",
   },
   {
-    when: "2021 — 2022",
-    role: "Strategy & Analytics",
-    org: "Sinarmas Cepsa",
+    when: "Jan 2026 — May 2026",
+    role: "Market Intelligence Analyst Intern",
+    org: "Sinarmas Cepsa Pte. Ltd.",
     challenge:
-      "Commercial leaders needed a joined-up view across sales, ops, and market context.",
+      "Understanding the global commodity market meant connecting fragmented trade and production.",
     approach:
-      "Built a rolling market view combining internal + external signals, framed around 'what would change your mind?'.",
-    impact: "Informed pricing and channel decisions and narrowed focus to highest-leverage segments.",
+      "Analyzed 100,000+ global oleochemical trade flows alongside operating rates and supply-demand dynamics across 100+ markets.",
+    impact: "Converted large-scale market data into structured intelligence repository for understanding global market dynamics.",
   },
   {
-    when: "2020 — 2021",
-    role: "Founder — COVIDKhoj",
-    org: "Volunteer-led crisis platform",
+    when: "2024 — 2025",
+    role: "Head of Growth & Partnerships",
+    org: "FreeStand Sampling Solutions",
     challenge:
-      "During the second wave, verified medical resources were scattered and stale.",
+      "Turning a technology platform into a repeatable commercial engine required solving - 1. marketplace growth and 2. campaign execution",
     approach:
-      "Built a lightweight verification pipeline, prioritized freshness and trust over feature depth.",
-    impact: "Served 100k+ users at peak; coordinated a distributed volunteer team.",
+      "Partenred with e-commerce platforms, created a campaign operations function and introduced AI-enabled workflows.",
+    impact: "Contributed $150K+ in revenue, secured 15+ partnerships and supported distribution of 1M+ product samples.",
+  },
+  {
+    when: "2020 — 2024",
+    role: "Founding Engineer",
+    org: "FreeStand Sampling Solutions",
+    challenge:
+      "Product sampling was operationally fragmented, with brands lacking a scalable tech layer.",
+    approach:
+      "Built a B2B SaaS marketplace, then developed automated workflows and integrations across advertising, payments and campaign operations.",
+    impact: "Took the platform from 0 → 1, supporting a $400K fundraise while establishing 20+ data pipelines and 10+ deployment workflows.",
   },
 ];
 
@@ -76,69 +86,78 @@ const SKILL_CLUSTERS: {
   items: { name: string; projects: string[] }[];
 }[] = [
     {
-      name: "Analytics",
+      name: "Digital Transformation",
       color: "oklch(0.72 0.17 250)",
       items: [
-        { name: "Power BI", projects: ["png-analytics", "dashboard-gallery"] },
-        { name: "SQL", projects: ["png-analytics", "sinarmas-cepsa", "freestand"] },
-        { name: "Excel", projects: ["png-analytics", "sinarmas-cepsa"] },
-        { name: "Tableau", projects: ["dashboard-gallery"] },
-        { name: "DAX", projects: ["png-analytics", "dashboard-gallery"] },
-        { name: "Looker Studio", projects: ["png-analytics"] },
+        { name: "Power BI", projects: ["keppel-pm"] },
+        { name: "Power Apps", projects: ["keppel-pm"] },
+        { name: "Power Automate", projects: ["keppel-pm"] },
+        { name: "Figma", projects: ["keppel-pm", "freestand-engineering"] },
+        { name: "Workflow Design", projects: ["keppel-pm", "freestand-growth"] },
+        { name: "UAT", projects: ["keppel-pm", "freestand-engineering"] },
       ],
     },
+
     {
-      name: "AI",
-      color: "oklch(0.75 0.19 190)",
-      items: [
-        { name: "LLMs", projects: ["freestand", "ai-projects"] },
-        { name: "Prompt engineering", projects: ["freestand", "ai-projects"] },
-        { name: "Agent workflows", projects: ["freestand", "ai-projects"] },
-        { name: "OpenAI APIs", projects: ["freestand", "ai-projects"] },
-        { name: "Claude", projects: ["freestand", "ai-projects"] },
-        { name: "AI automation", projects: ["ai-projects"] },
-      ],
-    },
-    {
-      name: "Technical",
+      name: "Engineering & Data",
       color: "oklch(0.72 0.19 20)",
       items: [
-        { name: "Python", projects: ["freestand", "ai-projects"] },
-        { name: "Node.js", projects: ["freestand"] },
-        { name: "React", projects: ["freestand"] },
-        { name: "C++", projects: [] },
-        { name: "Bash", projects: ["ai-projects"] },
-        { name: "Git", projects: ["freestand", "ai-projects"] },
+        { name: "Python", projects: ["sinarmas-cepsa", "freestand-engineering"] },
+        { name: "SQL", projects: ["sinarmas-cepsa", "freestand-engineering"] },
+        { name: "TypeScript", projects: ["freestand-engineering"] },
+        { name: "React", projects: ["freestand-engineering", "keppel-pm"] },
+        { name: "Node.js", projects: ["freestand-engineering"] },
+        { name: "PostgreSQL", projects: ["freestand-engineering"] },
+        { name: "REST APIs", projects: ["freestand-engineering"] },
+        { name: "AWS", projects: ["freestand-engineering"] },
+        { name: "Docker", projects: ["freestand-engineering"] },
+        { name: "Kubernetes", projects: ["freestand-engineering"] },
+        { name: "Git", projects: ["freestand-engineering"] },
       ],
     },
+
     {
-      name: "Business",
+      name: "AI & Automation",
+      color: "oklch(0.75 0.19 190)",
+      items: [
+        { name: "Agentic Workflows", projects: ["freestand-engineering", "freestand-growth"] },
+        { name: "AI Automation", projects: ["freestand-growth"] },
+        { name: "API Integrations", projects: ["freestand-engineering"] },
+        { name: "Data & ML Pipelines", projects: ["freestand-engineering"] },
+      ],
+    },
+
+    {
+      name: "Strategy & Execution",
       color: "oklch(0.78 0.14 90)",
       items: [
-        { name: "Product strategy", projects: ["freestand", "covidkhoj"] },
-        { name: "Growth", projects: ["covidkhoj"] },
-        { name: "Market research", projects: ["sinarmas-cepsa"] },
-        { name: "Stakeholder mgmt", projects: ["png-analytics", "sinarmas-cepsa"] },
-        { name: "Project management", projects: ["png-analytics", "covidkhoj"] },
+        { name: "Project Management", projects: ["keppel-pm"] },
+        { name: "Stakeholder Management", projects: ["keppel-pm", "png-analytics"] },
+        { name: "Growth Strategy", projects: ["freestand-growth"] },
+        { name: "Partnerships", projects: ["freestand-growth"] },
+        { name: "Market Intelligence", projects: ["sinarmas-cepsa", "png-analytics"] },
+        { name: "Campaign Operations", projects: ["freestand-growth"] },
+        { name: "Product Strategy", projects: ["freestand-engineering", "covidkhoj"] },
+        { name: "Agile", projects: ["keppel-pm", "freestand-engineering"] },
       ],
     },
   ];
 
 const AI_WORKFLOWS = [
   {
-    title: "Research → LLM → Analysis → Dashboard",
-    steps: ["Ingest", "Summarize", "Cluster", "Visualize"],
-    note: "Turns messy qualitative input into a live decision view.",
+    title: "1. Understand",
+    steps: ["Business Process", "Bottleneck", "Root Cause"],
+    note: "Map how work actually happens before deciding what should be digitized.",
   },
   {
-    title: "Customer data → AI insights → Recommendations",
-    steps: ["Signals", "Structure", "Reason", "Recommend"],
-    note: "Agent pipeline that surfaces what to do next, not just what happened.",
+    title: "2. Build",
+    steps: ["Workflow", "Data", "Automation"],
+    note: "Combine software, analytics and automation into systems designed around the people who use them.",
   },
   {
-    title: "Prompt design → Automation → Decision support",
-    steps: ["Prompt", "Test", "Deploy", "Monitor"],
-    note: "Prompts treated as testable functions with human-in-the-loop.",
+    title: "3. Scale",
+    steps: ["Test", "Measure", "Iterate"],
+    note: "Build for adoption and continuity — not just a prototype that works once.",
   },
 ];
 
@@ -176,30 +195,30 @@ function HomeContent() {
         <div className="container-page relative pt-10 pb-10 md:pt-14 md:pb-14">
           <div className="chip mb-6 animate-fade-in">
             <span className="h-1.5 w-1.5 rounded-full bg-brand animate-pulse" />
-            <span className="text-brand">Dual Specialization:</span>
-            Analytics & Operations + Strategy & Organisation
+            <span className="text-brand">MBA @ NUS</span>
+            · Strategy, Analytics & Digital Transformation
           </div>
           <h1 className="max-w-4xl text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.05]">
-            Building products that turn{" "}
+            Building systems that turn{" "}
             <span className="text-gradient">data into decisions</span>.
           </h1>
-          <p className="mt-6 max-w-2xl text-base md:text-lg text-muted-foreground">
-            I work at the intersection of analytics, AI, product strategy, and business
-            growth — designing systems that move teams <span className="text-brand">from information to action.</span>
+          <p className="mt-6 max-w-4xl text-base md:text-lg text-muted-foreground">
+            <span className="text-brand">I build. I operate. I transform.</span><br />
+            Combining a builder’s technical depth with an operator’s understanding of business processes
           </p>
           <div className="mt-8 flex flex-wrap gap-2">
             <a href="#work" className="btn-primary">Explore my work →</a>
-            <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn-ghost">Resume</a>
+            <a href={`${import.meta.env.BASE_URL}resume.pdf`} target="_blank" rel="noreferrer" className="btn-ghost">Resume</a>
             <a href="https://www.linkedin.com/in/lakshay-agrawal/" target="_blank" rel="noreferrer" className="btn-ghost">LinkedIn</a>
             <a href="mailto:lakshay.agrawal@u.nus.edu" target="_blank" rel="noreferrer" className="btn-ghost">Email</a>
           </div>
 
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { k: "Case studies", v: "6" },
-              { k: "Years shipping", v: "5+" },
-              { k: "Users served", v: "100k+" },
-              { k: "AI workflows", v: "15+" },
+              { k: "Years Building", v: "5+" },
+              { k: "Revenue Generated", v: "$ 150K+" },
+              { k: "Enterprise Clients", v: "10+" },
+              { k: "Digitalized Workflows", v: "30+" },
             ].map((s) => (
               <div key={s.k} className="card-elevated p-4">
                 <div className="text-2xl font-semibold">{s.v}</div>
@@ -212,7 +231,7 @@ function HomeContent() {
 
       {/* JOURNEY */}
       <section id="journey" className="container-page py-12 md:py-16">
-        <SectionHeader eyebrow="Career journey" title="From data to decisions to systems." />
+        <SectionHeader eyebrow="Career journey" title="Building solutions that scale." />
         <div className="mt-14 relative">
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-px" />
           <ol className="space-y-14">
@@ -238,16 +257,17 @@ function HomeContent() {
       {/* FEATURED WORK */}
       <section id="work" className="container-page py-24 md:py-32">
         <SectionHeader
-          eyebrow="Featured case studies"
-          title="Six angles on the same discipline: turn a mess into a decision."
+          eyebrow="Example Case Studies"
+          title="Turning Data into Decisions."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {CASE_STUDIES.map((c, i) => (
-            <Link
-              key={c.slug}
-              to={`/work/${c.slug}`}
-              className={`group card-elevated p-6 relative overflow-hidden transition-transform hover:-translate-y-0.5 ${i === 0 ? "md:col-span-2" : ""}`}
-            >
+            // <Link
+            //   key={c.slug}
+            //   to={`/work/${c.slug}`}
+            //   className={`group card-elevated p-6 relative overflow-hidden transition-transform hover:-translate-y-0.5`}
+            // >
+            <div className={`group card-elevated p-6 relative overflow-hidden transition-transform hover:-translate-y-0.5`}>
               <div
                 className="absolute -top-24 -right-24 h-64 w-64 rounded-full opacity-30 blur-3xl group-hover:opacity-50 transition-opacity"
                 style={{ background: c.accent }}
@@ -274,20 +294,21 @@ function HomeContent() {
                   <span key={t} className="chip !py-0.5">{t}</span>
                 ))}
               </div>
-              <div className="mt-6 text-sm text-brand flex items-center gap-1">
+              {/* <div className="mt-6 text-sm text-brand flex items-center gap-1">
                 Open case study
                 <span className="transition-transform group-hover:translate-x-0.5">→</span>
-              </div>
-            </Link>
+              </div> */}
+            </div>
+            // </Link>
           ))}
         </div>
-        <div className="mt-10 flex justify-center">
+        {/* <div className="mt-10 flex justify-center">
           <Link to="/projects" className="btn-ghost">Open project explorer →</Link>
-        </div>
+        </div> */}
       </section>
 
       {/* SKILLS */}
-      <section id="skills" className="container-page py-24 md:py-32">
+      <section id="skills" className="container-page py-24 md:py-0">
         <SectionHeader
           eyebrow="Skill map"
           title="Click any skill to see where it's been used."
@@ -306,7 +327,7 @@ function HomeContent() {
                     <button
                       key={s.name}
                       onClick={() => setActiveSkill(active ? null : s.name)}
-                      className={`chip transition-all ${active ? "!text-brand !border-brand/40 !bg-brand/10" : "hover:!text-foreground"}`}
+                      className={`chip cursor-pointer transition-all ${active ? "!text-brand !border-brand/40 !bg-brand/10" : "hover:!text-foreground"}`}
                     >
                       {s.name}
                     </button>
@@ -332,13 +353,13 @@ function HomeContent() {
                   const cs = CASE_STUDIES.find((c) => c.slug === slug);
                   if (!cs) return null;
                   return (
-                    <Link
-                      key={slug}
-                      to={`/work/${slug}`}
-                      className="btn-ghost !py-1.5 !text-xs"
-                    >
-                      {cs.title}
-                    </Link>
+                    <div className="btn-ghost !py-1.5 !text-xs">{cs.title}</div>
+                    // <Link
+                    //   key={slug}
+                    //   to={`/work/${slug}`}
+                    //   className="btn-ghost !py-1.5 !text-xs"
+                    // >
+                    // </Link>
                   );
                 });
               })()}
@@ -348,13 +369,13 @@ function HomeContent() {
       </section>
 
       {/* AI SECTION */}
-      <section id="ai" className="relative py-24 md:py-32 border-y border-border/60">
+      <section id="ai" className="relative py-12 md:py-36 border-y border-border/60">
         <div className="absolute inset-0 grid-bg opacity-60 pointer-events-none" />
         <div className="container-page relative">
-          <SectionHeader eyebrow="How I use AI" title="AI-native, not AI-adjacent." />
+          <SectionHeader eyebrow="How I build solutions" title="AI is useful when integrated." />
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            I don't bolt AI on. I redesign the workflow so the model is a component
-            of a system that survives Monday morning.
+            I don't bolt AI on. I redesign the workflow so the model is a part
+            of a system that survives a <u>Monday morning</u>.
           </p>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {AI_WORKFLOWS.map((w) => (
@@ -384,7 +405,7 @@ function HomeContent() {
       </section>
 
       {/* LEADERSHIP */}
-      <section id="leadership" className="container-page py-24 md:py-32">
+      {/* <section id="leadership" className="container-page py-24 md:py-32">
         <SectionHeader eyebrow="Founder & leadership" title="Ownership scales further than authority." />
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           <div className="card-elevated p-6 md:col-span-2">
@@ -419,7 +440,7 @@ function HomeContent() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* TESTIMONIALS */}
       {/* <section className="container-page py-24 md:py-32">
@@ -447,7 +468,7 @@ function HomeContent() {
       </section> */}
 
       {/* CONTACT */}
-      <section id="contact" className="relative py-24 md:py-32 border-t border-border/60 overflow-hidden">
+      <section id="contact" className="relative py-6 md:py-12 border-t border-border/60 overflow-hidden">
         <div className="absolute inset-0 opacity-40 pointer-events-none">
           <NodesBackground />
         </div>
@@ -455,7 +476,7 @@ function HomeContent() {
           <SectionHeader eyebrow="Contact" title="Reach me like it's a command line." />
           <p className="mt-4 max-w-xl text-muted-foreground">
             Prefer a keyboard? Press <kbd className="chip font-mono">Ctrl + K</kbd> anywhere on
-            the site. Or type below.
+            the site. Or click below.
           </p>
           <div className="mt-10 mx-auto max-w-xl">
             <button
@@ -525,11 +546,11 @@ function RecruiterPanel() {
       <div className="container-page py-4">
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs">
           <div className="chip !text-brand !border-brand/40">Quick Brief</div>
-          <Snippet k="Role fit" v="Analytics · Product · Strategy · AI" />
+          <Snippet k="Role fit" v="Analytics · Product · Strategy · AI · DT" />
           <Snippet k="Work auth" v="Open to sponsorship" />
           <Snippet k="Graduation" v="MBA · Jan 2027" />
           <Snippet k="Contact" v="lakshay.agrawal@u.nus.edu" />
-          <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn-ghost !py-1.5 !text-xs ml-auto">Resume →</a>
+          <a href={`${import.meta.env.BASE_URL}resume.pdf`} target="_blank" rel="noreferrer" className="btn-ghost !py-1.5 !text-xs ml-auto">Resume →</a>
         </div>
       </div>
     </div>
